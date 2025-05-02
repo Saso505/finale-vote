@@ -1,9 +1,12 @@
 {
+  "homepage": "https://Saso505.github.io/finale-vote",
   "name": "vote",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
