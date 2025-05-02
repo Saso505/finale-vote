@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import truth from "../src/assets/Truth.mp4";
 import liar from "../src/assets/Liar.mp4";
 import "./App.css";
+import logo from './assets/finlogo.png';
 
 function Voting() {
   const [selectedLiar, setSelectedLiar] = useState(null);
@@ -242,7 +243,11 @@ function Voting() {
 
   // 🔘 Regular Voting View
   return (
+
     <div className='all bg-[#0B1223] w-screen h-screen text-white'>
+      <header className="App-header md:p-8 p-4">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
       <div className='container mx-auto px-4 py-10'>
         <div className='head text-center mb-15'>
           <h1 className='lg:text-5xl text-3xl font-bold text-white'>EYE OF VERITAS</h1>
@@ -283,7 +288,7 @@ function Voting() {
 
                   <span className="trail" />
                 </div>
-                <span className="logo-bottom-text">Catch it 6/15</span>
+                <span className="logo-bottom-text">see result on 6/15</span>
               </div>
               <span className="bottom-text">Lairs</span>
             </div>
@@ -292,16 +297,16 @@ function Voting() {
 
         {/* Videos */}
         <div className='video flex  md:gap-14 gap-3 justify-center items-center md:mt-27 mt-20  flex-wrap'>
-          <video className='lg:w-96 md:w-80  w-64 h-64 rounded-lg object-cover md:p-0 pb-2' controls>
+          <video className='lg:w-96 md:w-80  w-64  h-64 rounded-lg object-cover md:p-0 pb-2' controls>
             <source src={truth} type='video/mp4' />
           </video>
-          <video className=' lg:w-96 md:w-80 w-64 h-64  rounded-lg object-cover' controls>
+          <video className=' lg:w-96 md:w-80 w-64  h-64  rounded-lg object-cover md:p-0 pb-2' controls>
             <source src={liar} type='video/mp4' />
           </video>
         </div>
 
         {/* Buttons */}
-        <div className='btn flex justify-evenly items-center pt-10 flex-wrap gap-5'>
+        <div className='btn flex justify-center items-center pt-10 flex-wrap lg:gap-45 md:gap-30 gap-7 '>
           <button
             onClick={() => handleChoice("video1")}
             disabled={selectedLiar !== null || isLoading}
