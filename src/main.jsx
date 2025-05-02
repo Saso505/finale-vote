@@ -4,17 +4,13 @@ import App from './App.jsx';
 import './index.css';
 import 'flowbite';
 
-
-import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+// Font Awesome via CSS import works too:
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-
     <App />
-
   </React.StrictMode>
 );
-
 

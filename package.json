@@ -1,8 +1,8 @@
 {
   "homepage": "https://Saso505.github.io/finale-vote",
-  "name": "vote",
+  "name": "finale-vote",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
